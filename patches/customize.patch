@@ -29,7 +29,6 @@
 +    printf "%s\n" "$sources" >> etc/apt/sources.list.d/devel.list
 +    chroot . apt update
 +    chroot . sh -c "DEBIAN_FRONTEND=noninteractive apt install $opts ${pkgs[*]}"
-+    rm etc/apt/sources.list.d/devel.list
 +    chroot . apt update
 +}
 +
